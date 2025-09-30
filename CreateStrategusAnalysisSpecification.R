@@ -32,8 +32,8 @@ oList <- CohortGenerator::readCsv("inst/oList.csv")
 ncoList <- CohortGenerator::readCsv("inst/negativeControlOutcomes.csv")
 excludedCovariateConcepts <- CohortGenerator::readCsv("inst/excludedCovariateConcepts.csv")
 
-sccsTList <- CohortGenerator::readCsv("inst/sccsTList.csv")
-sccsIList <- CohortGenerator::readCsv("inst/sccsIList.csv")
+# sccsTList <- CohortGenerator::readCsv("inst/sccsTList.csv")
+# sccsIList <- CohortGenerator::readCsv("inst/sccsIList.csv")
 
 # Get the list of cohorts
 cohortDefinitionSet <- CohortGenerator::getCohortDefinitionSet(
@@ -474,6 +474,7 @@ if (!dir.exists(rootFolder)) {
   dir.create(rootFolder, recursive = TRUE)
 }
 ParallelLogger::saveSettingsToJson(analysisSpecifications, file.path(rootFolder, "inst/demoStudyAnalysisSpecification.json"))
+
 
 
 
