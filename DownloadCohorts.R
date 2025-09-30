@@ -64,7 +64,7 @@ CohortGenerator::saveCohortDefinitionSet(
 
 # Download and save the negative control outcomes
 negativeControlOutcomeCohortSet <- ROhdsiWebApi::getConceptSetDefinition(
-  conceptSetId = 1887416,
+  conceptSetId = 1888552,
   baseUrl = baseUrl
 ) %>%
   ROhdsiWebApi::resolveConceptSet(
@@ -84,6 +84,7 @@ CohortGenerator::writeCsv(
   file = "inst/negativeControlOutcomes.csv",
   warnOnFileNameCaseMismatch = F
 )
+
 
 
 
