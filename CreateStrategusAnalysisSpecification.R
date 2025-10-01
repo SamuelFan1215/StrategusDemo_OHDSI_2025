@@ -479,4 +479,3 @@ ParallelLogger::saveSettingsToJson(analysisSpecifications, file.path(rootFolder,
 
 
 
-
