@@ -23,31 +23,31 @@ cohortDefinitionSet <- ROhdsiWebApi::exportCohortDefinitionSet(
   baseUrl = baseUrl,
   cohortIds = c(
     # Exposure 
-    1794501, # GLP-1RA
-    1794502, # DDP-4 inhibitor
+    1794522, # GLP-1RA
+    1794523, # DDP-4 inhibitor
     # outcome
-    1794503 # AMI
+    1794524 # AMI
   ),
   generateStats = TRUE
 )
 
 # Rename cohorts
 ## Exposure
-cohortDefinitionSet[cohortDefinitionSet$cohortId == 1794501,]$cohortName <- "GLP-1RA"
-cohortDefinitionSet[cohortDefinitionSet$cohortId == 1794502,]$cohortName <- "DDP-4 inhibitor"
+cohortDefinitionSet[cohortDefinitionSet$cohortId == 1794522,]$cohortName <- "GLP-1RA"
+cohortDefinitionSet[cohortDefinitionSet$cohortId == 1794523,]$cohortName <- "DDP-4 inhibitor"
 
 ## Outcome
-cohortDefinitionSet[cohortDefinitionSet$cohortId == 1794503,]$cohortName <- "Acute Myocardial Infarction"
+cohortDefinitionSet[cohortDefinitionSet$cohortId == 1794524,]$cohortName <- "Acute Myocardial Infarction"
 
 
 
 # Re-number cohorts
 ## Exposure
-cohortDefinitionSet[cohortDefinitionSet$cohortId == 1794501,]$cohortId <- 1
-cohortDefinitionSet[cohortDefinitionSet$cohortId == 1794502,]$cohortId <- 2
+cohortDefinitionSet[cohortDefinitionSet$cohortId == 1794522,]$cohortId <- 1
+cohortDefinitionSet[cohortDefinitionSet$cohortId == 1794523,]$cohortId <- 2
 
 ## Outcome
-cohortDefinitionSet[cohortDefinitionSet$cohortId == 1794503,]$cohortId <- 3
+cohortDefinitionSet[cohortDefinitionSet$cohortId == 1794524,]$cohortId <- 3
 
 
 
@@ -84,7 +84,6 @@ CohortGenerator::writeCsv(
   file = "inst/negativeControlOutcomes.csv",
   warnOnFileNameCaseMismatch = F
 )
-
 
 
 
