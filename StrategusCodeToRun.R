@@ -37,7 +37,7 @@ connectionDetails = DatabaseConnector::createConnectionDetails(
 ##=========== END OF INPUTS ==========
 
 analysisSpecifications <- ParallelLogger::loadSettingsFromJson(
-  fileName = "inst/fullStudyAnalysisSpecification.json"
+  fileName = "inst/demoAnalysisSpecification_tcis.json"
 )
 
 executionSettings <- Strategus::createCdmExecutionSettings(
@@ -62,3 +62,4 @@ Strategus::execute(
   executionSettings = executionSettings,
   connectionDetails = connectionDetails
 )
+
